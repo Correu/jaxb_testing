@@ -1,5 +1,41 @@
-<?xml version="1.0" encoding="UTF-8">
-<MonthlyRentItems>
+<?xml version="1.0" encoding="UTF-8"?>
+<MonthlyRentItems xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <Accounts>
+        <Account>
+            <FirstName>First</FirstName>
+            <LastName>Last</LastName>
+            <Name>First Last</Name>
+            <AccountStatus>Active</AccountStatus>
+            <MailingAddress>
+                <AddressOne>123 Street</AddressOne>
+                <City>San Antonio</City>
+                <State>TX</State>
+                <ZipCode>54321</ZipCode>
+            </MailingAddress>
+        </Account>
+        <Account>
+            <FirstName>First2</FirstName>
+            <LastName>Last2</LastName>
+            <Name>First2 Last2</Name>
+            <AccountStatus>Active</AccountStatus>
+            <MailingAddress>
+                <AddressOne>123 Street</AddressOne>
+                <City>San Antonio</City>
+                <State>TX</State>
+                <ZipCode>54321</ZipCode>
+            </MailingAddress>
+        </Account>
+        <Account>
+            <FirstName>First3</FirstName>
+            <LastName>Last3</LastName>
+            <Name>First3 Last3</Name>
+            <AccountStatus>Active</AccountStatus>
+            <MailingAddress>
+                <AddressOne>123 Street</AddressOne>
+                <City>San Antonio</City>
+                <State>TX</State>
+                <ZipCode>54321</ZipCode>
+            </MailingAddress>
+        </Account>
     </Accounts>
 </MonthlyRentItems>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="MonthlyRentItems" type="MonthlyRentItemsType"/>
+  <xs:complexType name="MailingAddressType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="AddressOne"/>
+      <xs:element type="xs:string" name="City"/>
+      <xs:element type="xs:string" name="State"/>
+      <xs:element type="xs:string" name="ZipCode"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PropertyAddressType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="AddressOne"/>
+      <xs:element type="xs:string" name="City"/>
+      <xs:element type="xs:string" name="State"/>
+      <xs:element type="xs:string" name="ZipCode"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddressesType">
+    <xs:sequence>
+      <xs:element type="MailingAddressType" name="MailingAddress"/>
+      <xs:element type="PropertyAddressType" name="PropertyAddress"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AccountType">
+    <xs:sequence>
+      <xs:element name="FirstName">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="First"/>
+            <xs:enumeration value="First2"/>
+            <xs:enumeration value="First3"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="LastName">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Last"/>
+            <xs:enumeration value="Last2"/>
+            <xs:enumeration value="Last3"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Name">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="First Last"/>
+            <xs:enumeration value="First2 Last2"/>
+            <xs:enumeration value="First3 Last3"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="AccountStatus"/>
+      <xs:element type="AddressesType" name="Addresses"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AccountsType">
+    <xs:sequence>
+      <xs:element type="AccountType" name="Account" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MonthlyRentItemsType">
+    <xs:sequence>
+      <xs:element type="AccountsType" name="Accounts"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
